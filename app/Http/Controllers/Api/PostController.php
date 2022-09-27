@@ -19,7 +19,11 @@ class PostController extends Controller
         $posts = Post::all();
         
         if($posts){
-            return response()->json($posts);
+            return response()->json([
+                'response' => true,
+                'results' => [
+                    'data' => $posts
+                ]]);
         }
         else return response('', 404);
     }
@@ -35,7 +39,11 @@ class PostController extends Controller
         $post = Post::find($id);
         
         if($post){
-            return response()->json($post);
+            return response()->json([
+                'response' => true,
+                'results' => [
+                    'data' => $post
+                ]]);
         }
         else return response('', 404);
     }
