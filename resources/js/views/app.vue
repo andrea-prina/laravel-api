@@ -1,19 +1,18 @@
 <template>
     <div>
-        <ul>
-            <li v-for="post in posts" :key="post['id']">
-                {{ post.title }}
-            </li>
-        </ul>
+        <Main :posts="posts"/>
     </div>
 </template>
 
 <script>
+import Main from '../components/Main.vue';
 import axios from 'axios';
 
 export default {
     name: "App",
-    components: {},
+    components: {
+        Main,
+    },
 
     data : function(){
         
