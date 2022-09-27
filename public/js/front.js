@@ -2086,7 +2086,30 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    " + _vm._s(_vm.post.title) + "\n")]);
+  return _c("div", {
+    staticClass: "d-flex justify-content-center"
+  }, [_c("div", {
+    staticClass: "card my-3 text-center",
+    staticStyle: {
+      width: "30rem"
+    }
+  }, [_c("img", {
+    staticClass: "card-img-top",
+    attrs: {
+      src: _vm.post.post_image,
+      alt: "Card image cap"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticClass: "card-body"
+  }, [_c("h5", {
+    staticClass: "card-title"
+  }, [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("p", {
+    staticClass: "card-text"
+  }, [_vm._v("\n            " + _vm._s(_vm.post.post_content) + "\n            ")])]), _vm._v(" "), _c("ul", {
+    staticClass: "list-group list-group-flush"
+  }, [_c("li", {
+    staticClass: "list-group-item"
+  }, [_vm._v(_vm._s(_vm.post.post_date))])])])]);
 };
 
 var staticRenderFns = [];
