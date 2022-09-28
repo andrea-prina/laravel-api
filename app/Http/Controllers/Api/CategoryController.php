@@ -35,7 +35,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $category = Category::with('posts')->find($id);
+        $category = Category::with('posts.user')->find($id);
         
         if($category){
             return response()->json([
